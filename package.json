@@ -1,0 +1,30 @@
+{
+  "name": "mohamed-chabane-website",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Victor Faramond <victor.faramond@gmail.com>",
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "gatsby": "^1.3.2",
+    "gatsby-link": "^1.3.2",
+    "gatsby-plugin-google-analytics": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^1.0.1",
+    "gatsby-source-contentful": "^1.3.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "slash": "^1.0.0"
+  },
+  "keywords": ["gatsby", "contenful", "react"],
+  "license": "MIT",
+  "lint-staged": {
+    "src/*.js": ["prettier --single-quote --trailing-comma all --write", "git add"]
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --single-quote --trailing-comma all --write \"src/layouts/*.js\" \"src/pages/*.js\" \"src/templates/*.js\" \"src/html.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
