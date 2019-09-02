@@ -37,10 +37,17 @@ class ProjectTemplate extends React.Component {
   }
 
   render() {
+    let youtubeVideoId;
+
     const project = this.props.data.contentfulProject;
     const { title, production, role } = project;
-    const videoId = project.youtubeVideoUrl.split('v=')[1];
+
+    if (project.youtubeVideoUrl.includes('youtube')) {
+      youtubeVideoId = project.youtubeVideoUrl.split('v=')[1];
+    }
+
     const date = moment(project.date);
+
     return (
       <div className="container">
         <div className="header clearfix">
@@ -49,9 +56,7 @@ class ProjectTemplate extends React.Component {
               <Link to={`/`}>Back</Link>
             </li>
             <li>
-              <h2>
-                {title}
-              </h2>
+              <h2>{title}</h2>
             </li>
           </ul>
           <div className="carousel-pager">
@@ -70,14 +75,25 @@ class ProjectTemplate extends React.Component {
                     src="data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACH5BAEAAAAALAAAAAAQAAkAAAIKhI+py+0Po5yUFQA7"
                     alt="iframe-ratio"
                   />
-                  <iframe
-                    title={title}
-                    width="1920"
-                    height="1080"
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1;showinfo=0`}
-                    frameBorder="0"
-                    allowFullScreen
-                  />
+                  {youtubeVideoId ? (
+                    <iframe
+                      title={title}
+                      width="1920"
+                      height="1080"
+                      src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1;showinfo=0`}
+                      frameBorder="0"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <iframe
+                      title={title}
+                      width="1920"
+                      height="1080"
+                      frameBorder="0"
+                      allowFullScreen
+                      src={`${project.youtubeVideoUrl}?autoplay=1`}
+                    ></iframe>
+                  )}
                 </div>
               </div>
             </ul>
@@ -105,9 +121,7 @@ class ProjectTemplate extends React.Component {
           </div>
         </div>
         <footer className="footer">
-          <h2>
-            ©{new Date().getFullYear()} Mohamed Chabane.
-          </h2>
+          <h2>©{new Date().getFullYear()} Mohamed Chabane.</h2>
         </footer>
       </div>
     );
