@@ -14,12 +14,20 @@
     "lint-staged": "^4.0.2",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
+    "prettier": "^2.8.8",
     "slash": "^1.0.0"
   },
-  "keywords": ["gatsby", "contenful", "react"],
+  "keywords": [
+    "gatsby",
+    "contentful",
+    "react"
+  ],
   "license": "MIT",
   "lint-staged": {
-    "src/*.js": ["prettier --single-quote --trailing-comma all --write", "git add"]
+    "src/*.js": [
+      "prettier --single-quote --trailing-comma all --write",
+      "git add"
+    ]
   },
   "scripts": {
     "build": "gatsby build",

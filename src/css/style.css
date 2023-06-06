@@ -13,7 +13,7 @@
 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
+  content: ' ';
   /* 1 */
   display: table;
   /* 2 */
@@ -34,8 +34,8 @@ body {
 
 @-webkit-keyframes zoom-in-sm {
   0% {
-    -webkit-transform: scale(.95);
-    transform: scale(.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
     opacity: 0;
   }
   100% {
@@ -45,8 +45,8 @@ body {
 
 @keyframes zoom-in-sm {
   0% {
-    -webkit-transform: scale(.95);
-    transform: scale(.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
     opacity: 0;
   }
   100% {
@@ -66,8 +66,8 @@ body {
     opacity: 1;
   }
   50% {
-    -webkit-transform: scale(.95);
-    transform: scale(.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
     opacity: 0;
   }
   100% {
@@ -82,8 +82,8 @@ body {
     opacity: 1;
   }
   50% {
-    -webkit-transform: scale(.95);
-    transform: scale(.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
     opacity: 0;
   }
   100% {
@@ -103,7 +103,7 @@ body {
 }
 
 a {
-  color: rgba(255, 255, 255, 0.75);
+  color: #a7a8a9;
   text-decoration: none;
 }
 
@@ -112,9 +112,9 @@ a:hover {
 }
 
 .header {
-  font-size: 1.4em;
+  font-size: 1em;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 1);
+  color: #a7a8a9;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -169,12 +169,12 @@ a:hover {
 }
 
 .list-project {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .list-project-item a {
   margin-bottom: 400px;
-  font-size: 1.4em;
+  font-size: 1em;
   line-height: 1.4;
   color: rgba(255, 255, 255);
   opacity: 0.7;
@@ -189,6 +189,7 @@ a:hover {
 }
 
 .item-wrapper {
+  position: relative;
   overflow: hidden;
   background-color: #000000;
 }
@@ -215,8 +216,12 @@ a:hover {
 }
 
 .list-project-title {
-  padding-top: 40px;
-  margin-bottom: 100px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .project {
@@ -239,7 +244,7 @@ a:hover {
 
 .project-item a {
   margin-bottom: 400px;
-  font-size: 1.4em;
+  font-size: 1em;
   line-height: 1.4;
   color: rgba(255, 255, 255);
   opacity: 0.7;
@@ -315,7 +320,7 @@ a:hover {
 .info-box {
   padding-top: 40px;
   width: 32%;
-  font-size: 1.4em;
+  font-size: 1em;
   line-height: 1.4;
   color: rgba(255, 255, 255, 1);
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
@@ -327,9 +332,9 @@ a:hover {
 .footer {
   margin-top: 100px;
   margin-bottom: 100px;
-  font-size: 1.4em;
+  font-size: 1em;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 1);
+  color: #a7a8a9;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -357,14 +362,10 @@ a:hover {
     margin-top: 20px;
   }
   .header {
-    font-size: 1.4em;
+    font-size: 1em;
   }
   .list-project-item a {
-    font-size: 1.4em;
-  }
-  .list-project-title {
-    padding-top: 20px;
-    margin-bottom: 60px;
+    font-size: 1em;
   }
   .footer {
     margin-top: 20px;
@@ -378,7 +379,7 @@ a:hover {
     margin-top: 40px;
   }
   .info-box {
-    font-size: 1.4em;
+    font-size: 1em;
     padding-bottom: 40px;
     display: inherit;
     width: 100%;
@@ -386,7 +387,7 @@ a:hover {
     padding-top: 20px;
   }
   .footer {
-    font-size: 0.8em;
+    font-size: 1em;
     margin-bottom: 60px;
   }
 }

@@ -48,9 +48,7 @@ export default class Template extends React.Component {
             { name: 'twitter:image', content: 'img/og-image.jpg' },
           ]}
         />
-        <div>
-          {this.props.children()}
-        </div>
+        <div>{this.props.children()}</div>
       </div>
     );
   }

@@ -1,7 +1,7 @@
-import React from 'react';
 import Link from 'gatsby-link';
-import * as PropTypes from 'prop-types';
 import _ from 'lodash';
+import * as PropTypes from 'prop-types';
+import React from 'react';
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -19,7 +19,7 @@ const transitionStyles = {
   entered: { opacity: 1 },
 };
 
-const Project = ({ node }) =>
+const Project = ({ node }) => (
   <li className="list-project-item clearfix animsition-link">
     <Link to={`/projects/${node.id}`}>
       <div className="item-wrapper">
@@ -30,12 +30,11 @@ const Project = ({ node }) =>
           srcSet={node.thumbnail.responsiveResolution.srcSet}
           alt={node.title}
         />
-      </div>
-      <div className="list-project-title">
-        {node.title}
+        <div className="list-project-title">{node.title}</div>
       </div>
     </Link>
-  </li>;
+  </li>
+);
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -50,7 +49,7 @@ class IndexPage extends React.Component {
   render() {
     const projectEdges = _.orderBy(
       this.props.data.projects.edges,
-      [edge => edge.node.order],
+      [(edge) => edge.node.order],
       ['asc'],
     );
     return (
@@ -78,16 +77,14 @@ class IndexPage extends React.Component {
         <main className="main">
           <div>
             <ul className="list-project clearfix zoom-in-sm">
-              {projectEdges.map(({ node }) =>
-                <Project node={node} key={node.id} />,
-              )}
+              {projectEdges.map(({ node }) => (
+                <Project node={node} key={node.id} />
+              ))}
             </ul>
           </div>
         </main>
         <footer className="footer">
-          <h2>
-            ©{new Date().getFullYear()} Mohamed Chabane.
-          </h2>
+          <h2>© {new Date().getFullYear()} Mohamed Chabane.</h2>
         </footer>
       </div>
     );
