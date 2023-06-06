@@ -7,20 +7,8 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-const duration = 300;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-};
-
-const transitionStyles = {
-  entering: { opacity: 0.5 },
-  entered: { opacity: 1 },
-};
-
 const Project = ({ node }) => (
-  <li className="list-project-item clearfix animsition-link">
+  <li className="list-project-item clearfix">
     <Link to={`/projects/${node.id}`}>
       <div className="item-wrapper">
         <img
@@ -39,25 +27,32 @@ const Project = ({ node }) => (
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { in: false };
-  }
-
-  componentDidMount() {
-    this.setState({ in: true });
+    this.state = {
+      activeFilter: 'all',
+    };
   }
 
   render() {
     const projectEdges = _.orderBy(
-      this.props.data.projects.edges,
+      this.props.data.projects.edges.filter(
+        ({ node }) =>
+          node.type === this.state.activeFilter ||
+          this.state.activeFilter === 'all',
+      ),
       [(edge) => edge.node.order],
       ['asc'],
     );
+
+    const types = _.uniq(
+      this.props.data.projects.edges.map(({ node }) => node.type),
+    ).filter(Boolean);
+
     return (
       <div className="container">
         <div className="header clearfix">
           <ul className="navigation-left">
             <li>
-              <Link to={`/`}>Mohamed Chabane</Link>
+              <h1>Mohamed Chabane</h1>
             </li>
             <li>
               <h2>Director</h2>
@@ -73,6 +68,30 @@ class IndexPage extends React.Component {
               </a>
             </li>
           </ul>
+          <div className="types-filter">
+            <span
+              className={
+                this.state.activeFilter === 'all' ? 'active-filter' : ''
+              }
+              onClick={() => this.setState({ activeFilter: 'all' })}
+              role="button"
+            >
+              All
+            </span>{' '}
+            /{' '}
+            {types.map((type, index) => (
+              <span
+                className={
+                  this.state.activeFilter === type ? 'active-filter' : ''
+                }
+                onClick={() => this.setState({ activeFilter: type })}
+                role="button"
+              >
+                {type}
+                {index !== types.length - 1 ? ' / ' : ''}
+              </span>
+            ))}
+          </div>
         </div>
         <main className="main">
           <div>
@@ -103,6 +122,7 @@ export const pageQuery = graphql`
           id
           title
           order
+          type
           thumbnail {
             responsiveResolution(width: 700) {
               width

@@ -32,20 +32,8 @@ body {
   animation-name: zoom-out;
 }
 
-@-webkit-keyframes zoom-in-sm {
-  0% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes zoom-in-sm {
   0% {
-    -webkit-transform: scale(0.95);
     transform: scale(0.95);
     opacity: 0;
   }
@@ -55,7 +43,6 @@ body {
 }
 
 .zoom-in-sm {
-  -webkit-animation: zoom-in-sm 1.5s;
   animation: zoom-in-sm 1.5s;
 }
 
@@ -120,6 +107,11 @@ a:hover {
   -webkit-font-smoothing: antialiased !important;
 }
 
+.header-title {
+  color: #ffffff;
+  margin-top: 60px;
+}
+
 .navigation-right {
   text-align: right;
   right: 0;
@@ -136,23 +128,33 @@ a:hover {
 
 .navigation-right a {
   display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid white;
+  text-decoration: underline;
   margin-bottom: -1px;
 }
 
 .navigation-right a:hover {
   color: rgba(255, 255, 255, 1);
   padding-bottom: 0em;
-  border-bottom: 0em solid rgba(127, 127, 127, 0.2);
   display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid white;
+  text-decoration: underline;
   margin-bottom: -1px;
 }
 
+.types-filter {
+  margin-top: 120px;
+}
+
+.types-filter span {
+  cursor: pointer;
+}
+
+.active-filter {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .main {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .list-project {
@@ -199,29 +201,25 @@ a:hover {
   height: auto;
   display: block;
   transition: all ease 0.3s;
-  -webkit-transition: 1.5s;
-  -moz-transition: 1.5s;
-  -o-transition: 1.5s;
-  -ms-transition: 1.5s;
-  transition: 1.5s;
 }
 
 .list-project-item img:hover {
-  -webkit-transform: scale(1.04);
-  -moz-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  -o-transform: scale(1.04);
   transform: scale(1.04);
   opacity: 0.8;
 }
 
 .list-project-title {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
+  opacity: 0;
   left: 0;
-  right: 0;
+  position: absolute;
   text-align: center;
+  top: 48%;
+  width: 100%;
+  transition: all ease 0.3s;
+}
+
+.list-project-item:hover .list-project-title {
+  opacity: 1;
 }
 
 .project {
@@ -322,7 +320,7 @@ a:hover {
   width: 32%;
   font-size: 1em;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 1);
+  color: #a7a8a9;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -363,6 +361,9 @@ a:hover {
   }
   .header {
     font-size: 1em;
+  }
+  .header-title {
+    margin-top: 20px;
   }
   .list-project-item a {
     font-size: 1em;

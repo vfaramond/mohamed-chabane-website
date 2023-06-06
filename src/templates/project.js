@@ -1,27 +1,13 @@
-import React from 'react';
 import Link from 'gatsby-link';
-import * as PropTypes from 'prop-types';
 import moment from 'moment';
+import * as PropTypes from 'prop-types';
+import React from 'react';
 
 const propTypes = {
   data: PropTypes.object.isRequired,
 };
 
 class ProjectTemplate extends React.Component {
-  renderPreviousLink() {
-    const previousId = this.props.pathContext.previousId;
-
-    if (!previousId) return null;
-
-    return (
-      <Link to={`/projects/${previousId}`}>
-        <button className="carousel-btn">
-          <span className="carousel-btn-label">Previous</span>
-        </button>
-      </Link>
-    );
-  }
-
   renderNextLink() {
     const nextId = this.props.pathContext.nextId;
 
@@ -56,14 +42,10 @@ class ProjectTemplate extends React.Component {
               <Link to={`/`}>Back</Link>
             </li>
             <li>
-              <h2>{title}</h2>
+              <h2 className="header-title">{title}</h2>
             </li>
           </ul>
-          <div className="carousel-pager">
-            {this.renderNextLink()}
-            <br />
-            {this.renderPreviousLink()}
-          </div>
+          <div className="carousel-pager">{this.renderNextLink()}</div>
         </div>
         <div className="zoom-in-sm">
           <main className="main">
@@ -100,28 +82,28 @@ class ProjectTemplate extends React.Component {
           </main>
           <div className="info-box">
             <h2>
-              Production
+              Production:
               <br />
               {production}
             </h2>
           </div>
           <div className="info-box">
             <h2>
-              Date
+              Date:
               <br />
               {date.format('MMMM Y')}
             </h2>
           </div>
           <div className="info-box">
             <h2>
-              Role
+              Role:
               <br />
               {role}
             </h2>
           </div>
         </div>
         <footer className="footer">
-          <h2>©{new Date().getFullYear()} Mohamed Chabane.</h2>
+          <h2>© {new Date().getFullYear()} Mohamed Chabane.</h2>
         </footer>
       </div>
     );
