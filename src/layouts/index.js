@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Helmet from 'react-helmet';
 
 import '../css/reset.css';
@@ -19,7 +19,7 @@ export default class Template extends React.Component {
             {
               name: 'description',
               content:
-                "Director based in Paris, currently work at L'ordre Co ; a french collective specialising in music, video and digital art. Fusing culture and technology to create original works.",
+                "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
             },
             { name: 'og:locale', content: 'fr_FR' },
             { name: 'og:type', content: 'fr_FR' },
@@ -27,7 +27,7 @@ export default class Template extends React.Component {
             {
               name: 'og:description',
               content:
-                "Director based in Paris, currently work at L'ordre Co ; a french collective specialising in music, video and digital art. Fusing culture and technology to create original works.",
+                "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
             },
             { name: 'og:url', content: 'mohamedchabane.com' },
             {
@@ -43,7 +43,7 @@ export default class Template extends React.Component {
             {
               name: 'twitter:description',
               content:
-                "Director based in Paris, currently work at L'ordre Co ; a french collective specialising in music, video and digital art. Fusing culture and technology to create original works.",
+                "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
             },
             { name: 'twitter:image', content: 'img/og-image.jpg' },
           ]}
