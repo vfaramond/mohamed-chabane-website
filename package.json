@@ -7,7 +7,6 @@
     "babel-eslint": "^7.2.3",
     "gatsby": "^1.3.2",
     "gatsby-link": "^1.3.2",
-    "gatsby-plugin-google-analytics": "^1.0.1",
     "gatsby-plugin-react-helmet": "^1.0.1",
     "gatsby-source-contentful": "^1.3.0",
     "husky": "^0.14.3",
@@ -16,10 +15,17 @@
     "moment": "^2.18.1",
     "slash": "^1.0.0"
   },
-  "keywords": ["gatsby", "contenful", "react"],
+  "keywords": [
+    "gatsby",
+    "contenful",
+    "react"
+  ],
   "license": "MIT",
   "lint-staged": {
-    "src/*.js": ["prettier --single-quote --trailing-comma all --write", "git add"]
+    "src/*.js": [
+      "prettier --single-quote --trailing-comma all --write",
+      "git add"
+    ]
   },
   "scripts": {
     "build": "gatsby build",
