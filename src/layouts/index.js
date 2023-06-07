@@ -19,7 +19,7 @@ export default class Template extends React.Component {
             {
               name: 'description',
               content:
-                "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
+                "Paris-based director duo crafting captivating movies, engaging commercials, and vibrant music videos with a unique blend of passion and enjoyment. Immerse in the world of innovative visual storytelling inspired by the heart of Paris.",
             },
             { name: 'og:locale', content: 'fr_FR' },
             { name: 'og:type', content: 'fr_FR' },
@@ -27,7 +27,7 @@ export default class Template extends React.Component {
             {
               name: 'og:description',
               content:
-                "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
+                "Paris-based director duo crafting captivating movies, engaging commercials, and vibrant music videos with a unique blend of passion and enjoyment. Immerse in the world of innovative visual storytelling inspired by the heart of Paris.",
             },
             { name: 'og:url', content: 'mohamedandtheo.com' },
             {
@@ -42,7 +42,7 @@ export default class Template extends React.Component {
             {
               name: 'twitter:description',
               content:
-                "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
+                "Paris-based director duo crafting captivating movies, engaging commercials, and vibrant music videos with a unique blend of passion and enjoyment. Immerse in the world of innovative visual storytelling inspired by the heart of Paris.",
             },
           ]}
         />
