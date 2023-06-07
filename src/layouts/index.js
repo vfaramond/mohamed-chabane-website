@@ -14,16 +14,16 @@ export default class Template extends React.Component {
     return (
       <div>
         <Helmet
-          title="Work — Momo & Théo — Directors"
+          title="Work — Mohamed&Theo — Directors"
           meta={[
             {
               name: 'description',
               content:
                 "Paris-based director duo crafting captivating movies, engaging commercials, and vibrant music videos with a unique blend of passion and enjoyment. Immerse in the world of innovative visual storytelling inspired by the heart of Paris.",
             },
-            { name: 'og:locale', content: 'fr_FR' },
-            { name: 'og:type', content: 'fr_FR' },
-            { name: 'og:title', content: 'Work — Momo & Théo — Directors' },
+            { name: 'og:locale', content: 'en' },
+            { name: 'og:type', content: 'en' },
+            { name: 'og:title', content: 'Work — Mohamed&Theo — Directors' },
             {
               name: 'og:description',
               content:
@@ -32,12 +32,12 @@ export default class Template extends React.Component {
             { name: 'og:url', content: 'mohamedandtheo.com' },
             {
               name: 'og:site_name',
-              content: 'Work — Momo & Théo — Directors',
+              content: 'Work — Mohamed&Theo — Directors',
             },
             { name: 'twitter:card', content: 'summary' },
             {
               name: 'twitter:title',
-              content: 'Work — Momo & Théo — Directors',
+              content: 'Work — Mohamed&Theo — Directors',
             },
             {
               name: 'twitter:description',

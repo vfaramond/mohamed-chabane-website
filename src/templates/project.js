@@ -96,7 +96,7 @@ class ProjectTemplate extends React.Component {
           </div>
         </div>
         <footer className="footer">
-          <h2>© {new Date().getFullYear()} Momo & Théo</h2>
+          <h2>© {new Date().getFullYear()} Mohamed&Theo</h2>
         </footer>
       </div>
     );

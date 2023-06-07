@@ -1,4 +1,4 @@
-# Momo & Théo website
+# Mohamed&Theo website
 
 Powered by [Gatbsy](https://www.gatsbyjs.org/) and [Contentful](https://www.contentful.com/).
 
