@@ -26,7 +26,7 @@ class ProjectTemplate extends React.Component {
     let youtubeVideoId;
 
     const project = this.props.data.contentfulProject;
-    const { title, production, role } = project;
+    const { title, production } = project;
 
     if (project.youtubeVideoUrl.includes('youtube')) {
       youtubeVideoId = project.youtubeVideoUrl.split('v=')[1];
@@ -94,13 +94,6 @@ class ProjectTemplate extends React.Component {
               {date.format('MMMM Y')}
             </h2>
           </div>
-          <div className="info-box">
-            <h2>
-              Role:
-              <br />
-              {role}
-            </h2>
-          </div>
         </div>
         <footer className="footer">
           <h2>© {new Date().getFullYear()} Mohamed Chabane.</h2>
@@ -121,7 +114,6 @@ export const pageQuery = graphql`
       youtubeVideoUrl
       production
       date
-      role
     }
   }
 `;
