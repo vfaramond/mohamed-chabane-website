@@ -182,8 +182,8 @@ a:hover {
   opacity: 0.7;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
   transition: all ease 0.3s;
+  position: relative;
 }
 
 .list-project-item a:hover {
@@ -191,7 +191,6 @@ a:hover {
 }
 
 .item-wrapper {
-  position: relative;
   overflow: hidden;
   background-color: #000000;
 }
@@ -203,9 +202,14 @@ a:hover {
   transition: all ease 0.3s;
 }
 
-.list-project-item img:hover {
-  transform: scale(1.04);
-  opacity: 0.8;
+.list-project-item .list-project-gif {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.list-project-item a:hover .list-project-gif {
+  opacity: 1;
 }
 
 .list-project-title {

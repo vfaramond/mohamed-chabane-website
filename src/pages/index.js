@@ -12,12 +12,24 @@ const Project = ({ node }) => (
     <Link to={`/projects/${node.id}`}>
       <div className="item-wrapper">
         <img
+          className="list-project-image"
           width={node.thumbnail.responsiveResolution.width}
           height={node.thumbnail.responsiveResolution.height}
           src={node.thumbnail.responsiveResolution.src}
           srcSet={node.thumbnail.responsiveResolution.srcSet}
           alt={node.title}
         />
+        {node.homePageGif && (
+          <img
+            className="list-project-gif"
+            width={node.homePageGif.responsiveResolution.width}
+            height={node.homePageGif.responsiveResolution.height}
+            src={node.homePageGif.responsiveResolution.src}
+            srcSet={node.homePageGif.responsiveResolution.srcSet}
+            // src="https://cdn.myportfolio.com/b5013cab-9ee0-47bf-af9f-4ba65aa0093a/b0847865-951b-4506-b5b3-8f563292eb74_rwc_0x28x566x319x566.gif?h=a57f5ce63a6e8ece21d4f2d96d7c29a7"
+            alt={node.title}
+          />
+        )}
         <div className="list-project-title">{node.title}</div>
       </div>
     </Link>
@@ -80,14 +92,16 @@ class IndexPage extends React.Component {
             </span>{' '}
             /{' '}
             {types.map((type, index) => (
-              <span
-                className={
-                  this.state.activeFilter === type ? 'active-filter' : ''
-                }
-                onClick={() => this.setState({ activeFilter: type })}
-                role="button"
-              >
-                {type}
+              <span key={type}>
+                <span
+                  className={
+                    this.state.activeFilter === type ? 'active-filter' : ''
+                  }
+                  onClick={() => this.setState({ activeFilter: type })}
+                  role="button"
+                >
+                  {type}
+                </span>
                 {index !== types.length - 1 ? ' / ' : ''}
               </span>
             ))}
@@ -124,6 +138,14 @@ export const pageQuery = graphql`
           order
           type
           thumbnail {
+            responsiveResolution(width: 700) {
+              width
+              height
+              src
+              srcSet
+            }
+          }
+          homePageGif {
             responsiveResolution(width: 700) {
               width
               height
