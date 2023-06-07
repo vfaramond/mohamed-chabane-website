@@ -29,12 +29,11 @@ export default class Template extends React.Component {
               content:
                 "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
             },
-            { name: 'og:url', content: 'mohamedchabane.com' },
+            { name: 'og:url', content: 'mohamedandtheo.com' },
             {
               name: 'og:site_name',
               content: 'Work — Momo & Théo — Directors',
             },
-            { name: 'og:image', content: 'img/og-image.jpg' },
             { name: 'twitter:card', content: 'summary' },
             {
               name: 'twitter:title',
@@ -45,7 +44,6 @@ export default class Template extends React.Component {
               content:
                 "Paris-based Director at L'ordre Co - a French creative collective specializing in music, video, and digital art. Seamlessly blending culture with cutting-edge technology to generate extraordinary and original pieces of art.",
             },
-            { name: 'twitter:image', content: 'img/og-image.jpg' },
           ]}
         />
         <div>{this.props.children()}</div>
