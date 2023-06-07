@@ -44,6 +44,30 @@ class IndexPage extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setEventListeners();
+  }
+
+  componentDidUpdate() {
+    this.setEventListeners();
+  }
+
+  setEventListeners() {
+    var projectItems = document.querySelectorAll('.list-project-item');
+
+    projectItems.forEach((gridItem) => {
+        ['touchstart', 'touchend'].forEach((evt) => {
+            gridItem.addEventListener(evt, (e) => {
+                if (this.classList.contains('touch-hover')) {
+                    this.classList.remove('touch-hover');
+                } else {
+                    this.classList.add('touch-hover');
+                }
+            });
+        });
+    });
+  }
+
   render() {
     const projectEdges = _.orderBy(
       this.props.data.projects.edges.filter(

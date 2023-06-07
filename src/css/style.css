@@ -208,7 +208,8 @@ a:hover {
   opacity: 0;
 }
 
-.list-project-item a:hover .list-project-gif {
+.list-project-item a:hover .list-project-gif,
+.list-project-item.touch-hover .list-project-gif {
   opacity: 1;
 }
 
