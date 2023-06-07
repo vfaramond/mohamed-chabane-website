@@ -74,9 +74,6 @@ class IndexPage extends React.Component {
             <li>
               <a href="mailto:momoandtheo@gmail.com">momoandtheo@gmail.com</a>
             </li>
-            <li>
-              <a href="https://www.instagram.com/mohamed_et_theo/">instagram</a>
-            </li>
           </ul>
           <div className="types-filter">
             <span
