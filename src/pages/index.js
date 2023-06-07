@@ -88,15 +88,15 @@ class IndexPage extends React.Component {
         <div className="header clearfix">
           <ul className="navigation-left">
             <li>
-              <h1>Mohamed Chabane</h1>
+              <h1>Momo & Théo</h1>
             </li>
             <li>
-              <h2>Director</h2>
+              <h2>Directors</h2>
             </li>
           </ul>
           <ul className="navigation-right">
             <li>
-              <a href="mailto:moamedchabane@gmail.com">
+              <a href="mailto:momoandtheo@gmail.com">
                 contact
               </a>
             </li>
@@ -138,7 +138,7 @@ class IndexPage extends React.Component {
           </div>
         </main>
         <footer className="footer">
-          <h2>© {new Date().getFullYear()} Mohamed Chabane.</h2>
+          <h2>© {new Date().getFullYear()} Momo & Théo</h2>
         </footer>
       </div>
     );

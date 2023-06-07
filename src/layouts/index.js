@@ -14,7 +14,7 @@ export default class Template extends React.Component {
     return (
       <div>
         <Helmet
-          title="Work — Mohamed Chabane — Director"
+          title="Work — Momo & Théo — Directors"
           meta={[
             {
               name: 'description',
@@ -23,7 +23,7 @@ export default class Template extends React.Component {
             },
             { name: 'og:locale', content: 'fr_FR' },
             { name: 'og:type', content: 'fr_FR' },
-            { name: 'og:title', content: 'Work — Mohamed Chabane — Director' },
+            { name: 'og:title', content: 'Work — Momo & Théo — Directors' },
             {
               name: 'og:description',
               content:
@@ -32,13 +32,13 @@ export default class Template extends React.Component {
             { name: 'og:url', content: 'mohamedchabane.com' },
             {
               name: 'og:site_name',
-              content: 'Work — Mohamed Chabane — Director',
+              content: 'Work — Momo & Théo — Directors',
             },
             { name: 'og:image', content: 'img/og-image.jpg' },
             { name: 'twitter:card', content: 'summary' },
             {
               name: 'twitter:title',
-              content: 'Work — Mohamed Chabane — Director',
+              content: 'Work — Momo & Théo — Directors',
             },
             {
               name: 'twitter:description',

@@ -1,14 +1,16 @@
-# Mohamed Chabane website
+# Momo & Théo website
 
 Powered by [Gatbsy](https://www.gatsbyjs.org/) and [Contentful](https://www.contentful.com/).
 
 ### Local development
+
 ```
 $ yarn
 $ yarn develop
 ```
 
 ### Building
+
 ```
 $ yarn
 $ yarn build
