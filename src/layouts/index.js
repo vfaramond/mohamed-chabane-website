@@ -29,12 +29,11 @@ export default class Template extends React.Component {
               content:
                 "Director based in Paris, currently work at L'ordre Co ; a french collective specialising in music, video and digital art. Fusing culture and technology to create original works.",
             },
-            { name: 'og:url', content: 'mohamedchabane.com' },
+            { name: 'og:url', content: 'mohamedandtheo.com' },
             {
               name: 'og:site_name',
               content: 'Work — Momo & Théo — Directors',
             },
-            { name: 'og:image', content: 'img/og-image.jpg' },
             { name: 'twitter:card', content: 'summary' },
             {
               name: 'twitter:title',
@@ -45,7 +44,6 @@ export default class Template extends React.Component {
               content:
                 "Director based in Paris, currently work at L'ordre Co ; a french collective specialising in music, video and digital art. Fusing culture and technology to create original works.",
             },
-            { name: 'twitter:image', content: 'img/og-image.jpg' },
           ]}
         />
         <div>{this.props.children()}</div>
