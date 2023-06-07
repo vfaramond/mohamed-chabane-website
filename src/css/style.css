@@ -24,7 +24,7 @@
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #ffffff;
 }
 
 .zoom-out {
@@ -90,7 +90,7 @@ body {
 }
 
 a {
-  color: #a7a8a9;
+  color: #656565;
   text-decoration: none;
 }
 
@@ -101,14 +101,14 @@ a:hover {
 .header {
   font-size: 1em;
   line-height: 1.4;
-  color: #a7a8a9;
+  color: #656565;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
 .header-title {
-  color: #ffffff;
+  color: #656565;
   margin-top: 60px;
 }
 
@@ -149,7 +149,7 @@ a:hover {
 }
 
 .active-filter {
-  color: #ffffff;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -324,7 +324,7 @@ a:hover {
   width: 32%;
   font-size: 1em;
   line-height: 1.4;
-  color: #a7a8a9;
+  color: #656565;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -336,7 +336,7 @@ a:hover {
   margin-bottom: 100px;
   font-size: 1em;
   line-height: 1.4;
-  color: #a7a8a9;
+  color: #656565;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;

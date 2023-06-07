@@ -1,10 +1,10 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.development`,
 });
 
 module.exports = {
   siteMetadata: {
-    title: `Work — Mohamed Chabane — Director`,
+    title: `Work — Momo & Théo — Directors`,
   },
   plugins: [
     {
