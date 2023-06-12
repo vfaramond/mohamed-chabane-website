@@ -96,11 +96,8 @@ class IndexPage extends React.Component {
           </ul>
           <ul className="navigation-right">
             <li>
-              <h2 href="#">+33 7 81 45 35 94</h2>
-            </li>
-            <li>
               <a href="mailto:moamedchabane@gmail.com">
-                moamedchabane@gmail.com
+                contact
               </a>
             </li>
           </ul>
