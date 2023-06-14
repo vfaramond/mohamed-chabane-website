@@ -69,8 +69,9 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const projects = this.props.data ? this.props.data.projects.edges : [];
     const projectEdges = _.orderBy(
-      this.props.data.projects.edges.filter(
+      projects.filter(
         ({ node }) =>
           node.type === this.state.activeFilter ||
           this.state.activeFilter === 'all',
@@ -80,7 +81,7 @@ class IndexPage extends React.Component {
     );
 
     const types = _.uniq(
-      this.props.data.projects.edges.map(({ node }) => node.type),
+      projects.map(({ node }) => node.type),
     ).filter(Boolean);
 
     return (
