@@ -179,16 +179,12 @@ a:hover {
   font-size: 1em;
   line-height: 1.4;
   color: rgba(255, 255, 255);
-  opacity: 0.7;
   font-family: 'BBentonSans-Regular', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   transition: all ease 0.3s;
   position: relative;
 }
 
-.list-project-item a:hover {
-  opacity: 1;
-}
 
 .item-wrapper {
   overflow: hidden;
