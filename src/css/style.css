@@ -126,7 +126,12 @@ a:hover {
   float: left;
 }
 
+.navigation-left h1 {
+  color: #fff;
+}
+
 .navigation-right a {
+  color: #fff;
   display: inline-block;
   text-decoration: underline;
   margin-bottom: -1px;
@@ -196,6 +201,7 @@ a:hover {
   height: auto;
   display: block;
   transition: all ease 0.3s;
+  width: 100%;
 }
 
 .list-project-item .list-project-gif {
