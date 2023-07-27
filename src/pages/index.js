@@ -100,6 +100,11 @@ class IndexPage extends React.Component {
                 contact
               </a>
             </li>
+            <li>
+              <a href="https://www.instagram.com/mohamed_et_theo/" target="_blank">
+                instagram
+              </a>
+            </li>
           </ul>
           <div className="types-filter">
             <span
